@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0px;
+  background: #110101;
+  color: white;
+}
+
+button {
+  border: 0;
+  background: transparent;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.App {
+  max-width: 1500px;
+  margin: auto;
+  text-align: center;
+  position: relative;
+}
+
+.puff-container {
+  padding: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-boxes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+
+.my-node-exit {
+  opacity: 1;
+}
+
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}

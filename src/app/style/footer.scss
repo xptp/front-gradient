@@ -1,0 +1,22 @@
+.footer {
+  // background-color: aqua;
+  margin-top: 300px;
+  margin-bottom: 100px;
+  height: 100px;
+  width: 100%;
+  text-align: left;
+  position: relative;
+}
+.footer-box {
+  display: inline-block;
+}
+.img-footer {
+  border-radius: 50%;
+  height: 110px;
+  margin-left: 5px;
+  margin-right: 25px;
+}
+.info-footer {
+  top: 20px;
+  position: absolute;
+}

@@ -1,0 +1,26 @@
+.header {
+  padding-top: 5px;
+  padding-bottom: 45px;
+  text-align: center;
+}
+
+.box {
+  display: inline-block;
+  position: relative; // ????????????
+}
+.logo {
+  height: 120px;
+  width: 430px;
+}
+.info {
+  position: absolute; // ????????
+  // display: flex;
+  padding-top: 10px;
+  color: #7e7a79;
+  right: 70px;
+  line-height: 12px;
+
+  @media (max-width: 784px) {
+    position: static;
+  }
+}

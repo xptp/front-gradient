@@ -1,0 +1,47 @@
+.name-box {
+  // bottom: 200px;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  top: 300px;
+
+  // bottom: 10px;
+}
+.img-name-holder {
+  // transition: 1s;
+  // margin-top: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  display: inline;
+}
+// .testtt {
+//   color: #110101;
+//   bottom: 200px;
+//   margin: 0;
+//   padding: 0;
+//   height: 0px;
+//   width: 0px;
+//   // position: relative;
+// }
+.container-actor {
+  // height: 500px;
+  width: 100px;
+}
+
+.box-photo {
+  background-size: contain;
+  height: 540px;
+  width: 360px;
+
+  margin: 40px;
+  // padding-left: 15px;
+  // padding-bottom: 15px;
+
+  // width: 350px;
+  filter: grayscale(1);
+  transition: 0.5s;
+}
+
+.box-photo:hover {
+  filter: grayscale(0);
+}
