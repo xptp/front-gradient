@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import ActorBox from "../../boxForList";
 import PostService from "../../../API/PostService";
 import { ThreeDots } from "react-loader-spinner";
+import { motion } from "framer-motion";
+import { listSort } from "../../utils/sort";
 
 const ActorsPage = () => {
   const [actors, setActors] = useState();
@@ -13,16 +15,29 @@ const ActorsPage = () => {
 
   async function fetchActors() {
     const a = await PostService.getMale();
-    setActors(a);
+    setActors(listSort(a));
+    setTimeout(() => {
+      setLoader(true);
+    }, 1000);
   }
 
   return (
-    <>
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0, transition: { duration: 0.1 } }}
+    >
       {actors ? (
         <div className="foto-boxes">
-          {actors.map((a) => (
-            <ActorBox obj={a} key={a.id} />
-          ))}
+          {actors.map((a, index) => {
+            return (
+              <div className="actor-kase" key={index}>
+                {a.map((aa) => {
+                  return <ActorBox obj={aa} key={aa.id} />;
+                })}
+              </div>
+            );
+          })}
         </div>
       ) : (
         <>
@@ -42,7 +57,7 @@ const ActorsPage = () => {
           ) : null}
         </>
       )}
-    </>
+    </motion.div>
   );
 };
 

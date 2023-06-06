@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import PostService from "../../../API/PostService";
-import { Link, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import "../../../style/oneActorPage.scss";
 import ActorStats from "./actorStats";
 import ReactPlayer from "react-player";
 import MoreStats from "../../moreStats";
 import { ThreeDots } from "react-loader-spinner";
+import ImagesSlider from "./ImagesSlider";
 
 const OneActorPage = () => {
   const [actor, setActor] = useState();
@@ -36,7 +37,7 @@ const OneActorPage = () => {
       setImages(actor.images);
     }
   }, [actor]);
-  console.log(actor);
+  // console.log(actor);
 
   return (
     <>
@@ -69,37 +70,7 @@ const OneActorPage = () => {
               language={actor.language}
             />
           </div>
-          <div className="main-img-container">
-            {images ? (
-              <>
-                {images.map((i) => {
-                  return (
-                    <Link to={i.images} key={i.id}>
-                      <img
-                        key={i.id}
-                        className="more-img"
-                        src={i.images}
-                        alt="img error"
-                      />
-                    </Link>
-                  );
-                })}
-              </>
-            ) : (
-              <div className="puff-container">
-                <ThreeDots
-                  height="100"
-                  width="100"
-                  radius={1}
-                  color="#7e7a79"
-                  ariaLabel="puff-loading"
-                  wrapperStyle={{}}
-                  wrapperClass=""
-                  visible={true}
-                />
-              </div>
-            )}
-          </div>
+          {images ? <ImagesSlider img={images} /> : null}
         </>
       ) : (
         <>

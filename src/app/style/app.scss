@@ -4,8 +4,10 @@
 }
 
 body {
-  margin: 0px;
-  background: #110101;
+  background: linear-gradient(#090000, #250000);
+  // height: 100%;
+  // background: #110101;
+  // background: #090000;
   color: white;
 }
 
@@ -20,14 +22,14 @@ a {
 }
 
 .App {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
   text-align: center;
   position: relative;
 }
 
 .puff-container {
-  padding: 200px;
+  // padding: 200px;
   display: flex;
   justify-content: center;
 }
@@ -36,22 +38,18 @@ a {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 
-.my-node-enter {
-  opacity: 0;
+.pages-box {
+  // max-width: 200px;
 }
 
-.my-node-enter-active {
-  opacity: 1;
-  transition: opacity 200ms;
-}
-
-.my-node-exit {
-  opacity: 1;
-}
-
-.my-node-exit-active {
-  opacity: 0;
-  transition: opacity 200ms;
+// .crutch {
+//   margin: 300px 0 300px 0;
+// }
+.actor-kase {
+  display: flex;
+  justify-content: center;
+  text-align: center;
 }

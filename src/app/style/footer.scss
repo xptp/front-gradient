@@ -1,5 +1,6 @@
 .footer {
   // background-color: aqua;
+  // max-width: 1500px;
   margin-top: 300px;
   margin-bottom: 100px;
   height: 100px;
@@ -11,12 +12,16 @@
   display: inline-block;
 }
 .img-footer {
+  position: absolute;
   border-radius: 50%;
   height: 110px;
-  margin-left: 5px;
-  margin-right: 25px;
+  left: 5px;
+  bottom: 0;
+  // margin-left: 5px;
+  // margin-right: 25px;
 }
 .info-footer {
-  top: 20px;
+  top: 30px;
+  left: 130px;
   position: absolute;
 }
