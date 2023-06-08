@@ -16,14 +16,12 @@
 .modal.active {
   opacity: 1;
   pointer-events: all;
-  // transform: scale(1);
 }
 
 .modal-content {
   padding: 10px;
   border-radius: 8px;
   background-color: white;
-  // height: 400px;
   width: 400px;
   transform: scale(0.5);
   transition: 0.4s all;

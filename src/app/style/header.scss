@@ -1,5 +1,4 @@
 .header {
-  // padding-top: 5px;
   padding-bottom: 45px;
   text-align: center;
 }
@@ -10,14 +9,13 @@
 
 .box {
   display: inline-block;
-  position: relative; // ????????????
+  position: relative;
 }
 .logo {
   height: 110px;
-  // width: 430px;
 }
 .info {
-  position: absolute; // ????????
+  position: absolute;
   // display: flex;
   padding-top: 10px;
   color: #7e7a79;
