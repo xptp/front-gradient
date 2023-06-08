@@ -1,17 +1,20 @@
 import React, { useEffect, useState } from "react";
 import PostService from "../../../API/PostService";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "../../../style/oneActorPage.scss";
 import ActorStats from "./actorStats";
 import ReactPlayer from "react-player";
 import MoreStats from "../../moreStats";
 import { ThreeDots } from "react-loader-spinner";
-import ImagesSlider from "./ImagesSlider";
+// import ImagesSlider from "./ImagesSlider";
+// import { Fade } from "../../animation/fadeSlider";
+// import { Modal } from "../../animation/modal";
 
 const OneActorPage = () => {
   const [actor, setActor] = useState();
   const [images, setImages] = useState(null);
   const [loader, setLoader] = useState(false);
+  // const [modalActive, setModalActive] = useState(false);
   const { id } = useParams();
 
   async function fetchActor() {
@@ -37,7 +40,7 @@ const OneActorPage = () => {
       setImages(actor.images);
     }
   }, [actor]);
-  // console.log(actor);
+  // console.log(images);
 
   return (
     <>
@@ -70,7 +73,26 @@ const OneActorPage = () => {
               language={actor.language}
             />
           </div>
-          {images ? <ImagesSlider img={images} /> : null}
+          {images ? (
+            <div className="main-img-container">
+              {/* <Modal active={modalActive} setActive={setModalActive}> */}
+              {/* {Fade(images)} */}
+              {images.map((i) => {
+                return (
+                  <Link to={i.images} key={i.id}>
+                    <img
+                      // onClick={() => setModalActive(true)}
+                      key={i.id}
+                      className="more-img"
+                      src={i.images}
+                      alt="img error"
+                    />
+                  </Link>
+                );
+              })}
+              {/* </Modal> */}
+            </div>
+          ) : null}
         </>
       ) : (
         <>

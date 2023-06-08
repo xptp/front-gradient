@@ -1,7 +1,7 @@
 import React from "react";
 import "../../style/modal.scss";
 
-const Modal = ({ active, setActive, children }) => {
+export const Modal = ({ active, setActive, children }) => {
   return (
     <div
       className={active ? "modal active" : "modal"}
@@ -17,4 +17,4 @@ const Modal = ({ active, setActive, children }) => {
   );
 };
 
-export default Modal;
+// export  Modal;

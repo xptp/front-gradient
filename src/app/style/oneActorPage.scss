@@ -33,9 +33,6 @@
   margin: 0 0 0 100px;
 }
 
-.dark {
-  color: #7e7a79;
-}
 .info-div {
   position: relative;
 }
@@ -50,8 +47,19 @@
 .drop-btn:hover {
   color: white;
 }
+.texttt {
+  // align-items: center;
+  // justify-content: center;
+}
 
 .drop-contet {
+  position: relative;
+  text-align: left;
+  // margin-left: 100px;
+  line-height: 30px;
+  left: 100px;
+  // align-items: center;
+
   font-size: 20px;
   &.hide {
     opacity: 0;

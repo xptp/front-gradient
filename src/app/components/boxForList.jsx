@@ -23,7 +23,7 @@ const ActorBox = ({ obj }) => {
           <h2 className="name-box">
             {obj.name} {obj.last_name}
           </h2>
-          <h2 className="name-box">
+          <h2 className="name-box name-age">
             {checkActor(obj)} {obj.age} {obj.agetype}
           </h2>
         </>

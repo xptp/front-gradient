@@ -42,10 +42,10 @@ const MoreStats = ({ roles, skills, language }) => {
             <button className="drop-btn dark" onClick={switchRoles}>
               Роли в кино {<VscAdd />}
             </button>
-            <div className={`drop-contet ${role}`}>
+            <div className={` drop-contet ${role}`}>
               {newRoles.map((r, index) => {
                 return (
-                  <div className={`drop-contet ${role} `} key={index}>
+                  <div className={`drop-contet drop-role ${role} `} key={index}>
                     {r}
                   </div>
                 );
@@ -57,7 +57,7 @@ const MoreStats = ({ roles, skills, language }) => {
             <button className="drop-btn dark" onClick={switchSkills}>
               Умения и навыки {<VscAdd />}
             </button>
-            <div className={`drop-contet ${skill}`}>
+            <div className={`drop-contet drop-skills ${skill}`}>
               {newSkills.map((s, index) => {
                 return (
                   <div className={`drop-contet ${skill} `} key={index}>
@@ -72,7 +72,7 @@ const MoreStats = ({ roles, skills, language }) => {
             <button className="drop-btn  dark" onClick={switchLanguages}>
               Знание языков {<VscAdd />}
             </button>
-            <div className={`drop-contet ${languag}`}>
+            <div className={`drop-contet drop-language ${languag}`}>
               {newLanguages.map((l, index) => {
                 return (
                   <div className={`drop-contet ${languag}`} key={index}>

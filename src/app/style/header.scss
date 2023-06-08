@@ -1,7 +1,11 @@
 .header {
-  padding-top: 5px;
+  // padding-top: 5px;
   padding-bottom: 45px;
   text-align: center;
+}
+
+.head-name {
+  margin: 2px 0 15px 0;
 }
 
 .box {
@@ -9,8 +13,8 @@
   position: relative; // ????????????
 }
 .logo {
-  height: 120px;
-  width: 430px;
+  height: 110px;
+  // width: 430px;
 }
 .info {
   position: absolute; // ????????
@@ -19,7 +23,7 @@
   color: #7e7a79;
   right: 60px;
   top: 20px;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 12px;
 
   @media (max-width: 784px) {
